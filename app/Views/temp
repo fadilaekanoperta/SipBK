@@ -1,0 +1,21 @@
+
+<!-- ======= Template View User ======= -->
+
+<?= $this->extend('layout/page_layout') ?>
+
+<?= $this->section('content') ?>
+    <!-- konten view di sini -->
+<?= $this->endSection() ?>
+
+<!-- ======= End Template View User ======= -->
+
+
+<!-- ======= Template View Admin ======= -->
+
+<?= $this->extend('admin/temp_layout') ?>
+
+<?= $this->section('temp_content') ?>
+    <!-- konten view di sini -->
+<?= $this->endSection() ?>
+
+<!-- ======= End Template View Admin ======= -->
