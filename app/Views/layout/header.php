@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <a href="<?= base_url('/') ?>" class="logo d-flex align-items-center  me-auto me-lg-0">
-        <h1>SiBK</h1>
+        <h1>SipBK</h1>
       </a>
 
       <!-- ======= Navbar ======= -->
