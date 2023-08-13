@@ -44,6 +44,34 @@
                     </form>
                     <div class="datab">
                         <h4 class="title">Data Pendaftar Beasiswa</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">No HP</th>
+                                    <th scope="col">Semester</th>
+                                    <th scope="col">IPK Terakhir</th>
+                                    <th scope="col">Pilihan Beasiswa</th>
+                                    <th scope="col">Berkas Syarat</th>
+                                    <th scope="col">Status Pengajuan</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Muhammad Nur Cahyo</td>
+                                    <td>nurcahyo@gmail.com</td>
+                                    <td>08978909890</td>
+                                    <td>3</td>
+                                    <td>3.15</td>
+                                    <td>Beasiswa Non Akademik B</td>
+                                    <td><a href="#">Unduh</a></td>
+                                    <td>Belum Diverifikasi</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
                     </div>
                 </div>
                 <!-- <div class="container px-5 my-4">
