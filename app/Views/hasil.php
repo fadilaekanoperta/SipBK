@@ -25,7 +25,24 @@
                     <h2 class="title">Hasil Pendaftaran Beasiswa</h2>
                 </div>
                 <div class="card-body">
-                    
+                <!-- <div class="container px-5 my-5">
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <div class="row">
+                            <div class="form-floating col-5 mb-3">
+                                <input class="form-control" id="masukkanNama" type="text" placeholder="Masukkan Nama" data-sb-validations="required" />
+                                <label for="masukkanNama">Masukkan Nama</label>
+                                <div class="invalid-feedback" data-sb-feedback="masukkanNama:required">Nama wajib diisi.</div>
+                            </div>
+                            <div class="form-floating col-5 mb-3">
+                                <input class="form-control" id="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
+                                <label for="masukkanEmail">Masukkan Email</label>
+                                <div class="invalid-feedback" data-sb-feedback="masukkanEmail:required">Email wajib diisi.</div>
+                                <div class="invalid-feedback" data-sb-feedback="masukkanEmail:email">Email tidak sesuai</div>
+                            </div>
+                            <button class="btn-get-search col-1" id="searchButton" type="submit">Cari</button>
+                        </div>
+                    </form>
+                </div> -->
                 </div>
             </div>
         </div>

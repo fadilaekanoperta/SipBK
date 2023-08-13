@@ -1215,12 +1215,11 @@ h6 {
   font-size: 18px;
 }
 
-.btn-get-started, .btn-get-reset {
+.btn-get-started, .btn-get-reset, .btn-get-search {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 14px;
   display: inline-block;
-  padding: 12px 40px;
   border-radius: 4px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1228,8 +1227,14 @@ h6 {
   color: #fff;
 }
 
+.btn-get-search{
+  background-color: #36afff;
+  padding: 5px 10px;
+}
+
 .btn-get-started{
   background: var(--color-primary);
+  padding: 12px 40px;
 }
 
 .btn-get-started:hover {
@@ -1238,6 +1243,7 @@ h6 {
 
 .btn-get-reset{
   background: var(--color-grey);
+  padding: 12px 40px;
 }
 
 .btn-get-reset:hover {
