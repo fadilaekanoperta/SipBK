@@ -2,18 +2,31 @@
 
 <?= $this->section('content') ?>
 
-  <main id="main" data-aos="fade" data-aos-delay="1500">
+  <!-- ======= Navbar ======= -->
+  <nav id="navbar" class="navbar">
+    <ul>
+        <li><a href="<?= base_url('/') ?>">Pilihan Beasiswa</a></li>
+        <li><a href="<?= base_url('daftar') ?>" class="active">Daftar</a></li>
+        <li><a href="<?= base_url('hasil') ?>">Hasil</a></li>
+    </ul>
+  </nav>
+<!-- ======= End Navbar ======= -->
 
+  </div>
+</header><!-- End Header -->
+
+  <main id="main" data-aos="fade" data-aos-delay="1500">
     <!-- ======= About Section ======= -->
     <section id="about" class="about pcontent">
       <div class="container">
 
         <div class="row gy-4 justify-content-center">
+        <?php foreach($beasiswa as $pb){ ?>
           <div class="col-lg-4">
             <img src="assets/img/beasiswa.webp" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 content">
-            <h2>Nama Beasiswa</h2>
+            <h2><?= ucwords($pb['nama_beasiswa']) ?></h2>
             <p class="fst-italic py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
@@ -33,8 +46,8 @@
               Soluta eligendi fugiat omnis enim. Numquam alias sint possimus eveniet ad. Ratione in earum eum magni totam.
             </p>
           </div>
+          <?php } ?>
         </div>
-
       </div>
     </section><!-- End About Section -->
 

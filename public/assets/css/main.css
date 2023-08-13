@@ -22,6 +22,7 @@
   --color-default: #fafafa;
   --color-primary: #27a776;
   --color-secondary: #161718;
+  --color-grey: #666;
 }
 
 /* Smooth scroll behavior */
@@ -1214,7 +1215,7 @@ h6 {
   font-size: 18px;
 }
 
-.hero .btn-get-started {
+.btn-get-started, .btn-get-reset {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 14px;
@@ -1225,11 +1226,22 @@ h6 {
   text-transform: uppercase;
   transition: 0.3s;
   color: #fff;
+}
+
+.btn-get-started{
   background: var(--color-primary);
 }
 
-.hero .btn-get-started:hover {
+.btn-get-started:hover {
   background: #2cbc85;
+}
+
+.btn-get-reset{
+  background: var(--color-grey);
+}
+
+.btn-get-reset:hover {
+  background: #727686;
 }
 
 @media (max-width: 768px) {
@@ -1412,21 +1424,21 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-background-color: floralwhite;
-width: 4rem;
+background-color: #f3dde0;
+width: 6rem;
 height: 4rem;
 border-radius: 50%;
 }
 
 .pilihan_beasiswa .widget-49 .widget-49-title-wrapper .widget-49-date-warning .widget-49-date-day {
-color: #FFC868;
+color: #df1529;
 font-weight: 500;
 font-size: 1.5rem;
 line-height: 1;
 }
 
 .pilihan_beasiswa .widget-49 .widget-49-title-wrapper .widget-49-date-warning .widget-49-date-month {
-color: #FFC868;
+color: #df1529;
 line-height: 1;
 font-size: 1rem;
 text-transform: uppercase;
@@ -1554,12 +1566,14 @@ font-size: 13px;
 margin-top: .5rem;
 }
 
-.pilihan_beasiswa .widget-49 .widget-49-meeting-points .widget-49-meeting-item {
-display: list-item;
+.pilihan_beasiswa .widget-49 .widget-49-meeting-item {
 color: #727686;
+font-weight: 400;
+font-size: 13px;
+margin-top: .5rem;
 }
 
-.pilihan_beasiswa .widget-49 .widget-49-meeting-points .widget-49-meeting-item span {
+.pilihan_beasiswa .widget-49 .widget-49-meeting-item span {
 margin-left: .5rem;
 }
 
