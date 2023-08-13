@@ -1229,7 +1229,8 @@ h6 {
 
 .btn-get-search{
   background-color: #36afff;
-  padding: 5px 10px;
+  padding: 5px;
+  height: 55px;
 }
 
 .btn-get-started{
@@ -1381,7 +1382,7 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 background-color: #e8faf8;
-width: 4rem;
+width: 6rem;
 height: 4rem;
 border-radius: 50%;
 }

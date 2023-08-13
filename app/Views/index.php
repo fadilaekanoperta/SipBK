@@ -46,9 +46,15 @@
                   <div class="widget-49">
                       <div class="widget-49-title-wrapper">
                       <!-- <img src="assets/img/beasiswa.webp" class="img-fluid" width="70" height="70" alt=""> -->
+                          <?php if($pb['status'] == 'tutup'){ ?>
                           <div class="widget-49-date-warning">
                               <span class="widget-49-date-day"><?= ucwords($pb['status']) ?></span>
                           </div>
+                          <?php }else{ ?>
+                          <div class="widget-49-date-success">
+                              <span class="widget-49-date-day"><?= ucwords($pb['status']) ?></span>
+                          </div>
+                          <?php } ?>
                           <div class="widget-49-meeting-info">
                               <span class="widget-49-pro-title"><?= ucwords($pb['jangka_beasiswa']) ?></span>
                               <span class="widget-49-meeting-time"><?= ucwords($pb['deadline']) ?></span>
