@@ -31,9 +31,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/detail_beasiswa', 'Page::detail_beasiswa');
+$routes->get('/detail_beasiswa/(:num)', 'Page::detail_beasiswa/$1');
 $routes->get('/daftar', 'Page::daftar');
+$routes->post('/daftar', 'Page::create');
 $routes->get('/hasil', 'Page::hasil');
+$routes->get('/ipk_mahasiswa/(:segment)/(:segment)', 'CheckingController::mahasiswa/$1/$2');
 
 
 /*

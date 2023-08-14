@@ -22,10 +22,10 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/beasiswa.webp" class="img-fluid" alt="">
+            <img src="<?php base_url() ?>/assets/img/beasiswa.webp" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 content">
-            <h2>Beasiswa 1</h2>
+            <h2><?= $beasiswa->nama_beasiswa ?></h2>
             <p class="fst-italic py-3">
               Beasiswa selama 1 semester <br> Deadline pengajuan Jumat, 09 April 2023 Pukul 23:59 WIB
             </p>

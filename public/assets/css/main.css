@@ -1591,3 +1591,11 @@ text-align: right;
 .pilihan_beasiswa .widget-49 .widget-49-meeting-action a {
 text-transform: uppercase;
 }
+
+.bi-check-circle-fill{
+  color: #27a776;
+}
+
+.bi-x-circle-fill{
+  color: #df1529;
+}

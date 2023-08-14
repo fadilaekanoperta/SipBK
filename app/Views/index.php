@@ -63,7 +63,7 @@
                       <span class="widget-49-pro-title">Persyaratan:</span><br>
                       <span class="widget-49-meeting-item"><?= ucwords($pb['deskripsi_singkat']) ?></span>
                       <div class="widget-49-meeting-action"><br>
-                          <a href="<?= base_url('detail_beasiswa') ?>?id=<?= $pb['id_beasiswa']; ?>" class="btn btn-sm btn-flash-border-primary">Baca Selengkapnya</a>
+                          <a href="<?php base_url() ?>/detail_beasiswa/<?= $pb['id_beasiswa'] ?>" class="btn btn-sm btn-flash-border-primary">Baca Selengkapnya</a>
                       </div>
                   </div>
               </div>

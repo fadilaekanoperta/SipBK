@@ -15,7 +15,7 @@
   </div>
 </header><!-- End Header -->
 
-    <link href="assets/css/form.css" rel="stylesheet">
+    <link href="<?php base_url() ?>/assets/css/form.css" rel="stylesheet">
     
     <section class="daftar">
     <div class="pcontent page-wrapper">
@@ -26,14 +26,14 @@
                 </div>
                 <div class="card-body">
                 <div class="container px-5 my-5">
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="<?php base_url() ?>/daftar" method="post" enctype="multipart/form-data">
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="masukkanNama" type="text" placeholder="Masukkan Nama" data-sb-validations="required" />
+                            <input class="form-control" id="masukkanNama" name="masukkanNama" type="text" placeholder="Masukkan Nama" data-sb-validations="required" />
                             <label for="masukkanNama">Masukkan Nama</label>
                             <div class="invalid-feedback" data-sb-feedback="masukkanNama:required">Nama wajib diisi.</div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
+                            <input class="form-control" id="masukkanEmail" name="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
                             <label for="masukkanEmail">Masukkan Email</label>
                             <div class="invalid-feedback" data-sb-feedback="masukkanEmail:required">Email wajib diisi.</div>
                             <div class="invalid-feedback" data-sb-feedback="masukkanEmail:email">Email tidak sesuai</div>
@@ -44,35 +44,31 @@
                             <div class="invalid-feedback" data-sb-feedback="nomorHp:required">Nomor HP wajib diisi.</div>
                         </div>
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="semesterSaatIni" aria-label="Semester saat ini">
-                                <option selected disabled>Pilih semester</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
+                            <select class="form-select" id="semesterSaatIni" aria-label="Semester saat ini" required>
+                                <option value="" selected disabled>Pilih semester</option>
+                                <?php foreach($semester as $sem){ ?>
+                                <option value="<?= $sem['id_semester'] ?>"><?= ucwords($sem['nama_semester']) ?></option>
+                                <?php } ?>
                             </select>
                             <label for="semesterSaatIni">Semester saat ini</label>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" id="ipkTerakhir" type="text" placeholder="IPK Terakhir" data-sb-validations="required" value="Otomatis dari sistem" disabled/>
+                            <input class="form-control" id="id_ipk" name="id_ipk" type="text"  hidden/>
                             <label for="ipkTerakhir">IPK Terakhir</label>
                             <div class="invalid-feedback" data-sb-feedback="ipkTerakhir:required">IPK Terakhir wajib diisi.</div>
                         </div>
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="pilihanBeasiswa" aria-label="Pilihan Beasiswa">
-                                <option selected disabled>Pilih beasiswa</option>
-                                <option value="Beasiswa 1">Beasiswa 1</option>
-                                <option value="Beasiswa Akademik A">Beasiswa Akademik A</option>
-                                <option value="Beasiswa Non Akademik B">Beasiswa Non Akademik B</option>
+                            <select class="form-select" id="pilihanBeasiswa" name="pilihanBeasiswa" aria-label="Pilihan Beasiswa">
+                                <option value="" selected disabled>Pilih beasiswa</option>
+                                <?php foreach($beasiswa as $bes){ ?>
+                                <option value="<?= $bes['id_beasiswa'] ?>"><?= ucwords($bes['nama_beasiswa']) ?></option>
+                                <?php } ?>
                             </select>
                             <label for="pilihanBeasiswa">Pilihan Beasiswa</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="uploadBerkasPersyaratan" type="file" placeholder="Upload Berkas Persyaratan" data-sb-validations="required" />
+                            <input class="form-control" accept=".pdf, .png, .zip" name="uploadBerkasPersyaratan" id="uploadBerkasPersyaratan" type="file" placeholder="Upload Berkas Persyaratan" data-sb-validations="required" />
                             <label for="uploadBerkasPersyaratan">Upload Berkas Persyaratan</label>
                             <div class="invalid-feedback" data-sb-feedback="uploadBerkasPersyaratan:required">Upload Berkas Persyaratan wajib diisi.</div>
                         </div>

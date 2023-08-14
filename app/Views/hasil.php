@@ -15,7 +15,7 @@
   </div>
 </header><!-- End Header -->
 
-    <link href="assets/css/form.css" rel="stylesheet">
+    <link href="<?php base_url() ?>/assets/css/form.css" rel="stylesheet">
 
     <section class="hasil">
     <div class="pcontent page-wrapper">
@@ -26,15 +26,15 @@
                 </div>
                 <div class="card-body">
                 <div class="container px-5 my-5">
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="get" action="<?php base_url() ?>/hasil">
                         <div class="row">
                             <div class="form-floating col-5 mb-3">
-                                <input class="form-control" id="masukkanNama" type="text" placeholder="Masukkan Nama" data-sb-validations="required" />
+                                <input class="form-control" id="masukkanNama" name="masukkanNama" type="text" placeholder="Masukkan Nama" data-sb-validations="required" />
                                 <label for="masukkanNama" class="mx-2">Masukkan Nama</label>
                                 <div class="invalid-feedback" data-sb-feedback="masukkanNama:required">Nama wajib diisi.</div>
                             </div>
                             <div class="form-floating col-5 mb-3">
-                                <input class="form-control" id="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
+                                <input class="form-control" id="masukkanEmail" name="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
                                 <label for="masukkanEmail" class="mx-2">Masukkan Email</label>
                                 <div class="invalid-feedback" data-sb-feedback="masukkanEmail:required">Email wajib diisi.</div>
                                 <div class="invalid-feedback" data-sb-feedback="masukkanEmail:email">Email tidak sesuai</div>
@@ -42,37 +42,64 @@
                             <button class="btn-get-search col-1" id="searchButton" type="submit">Cari</button>
                         </div>
                     </form>
-                    <div class="datab">
-                        <h4 class="title">Data Pendaftar Beasiswa</h4>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">No HP</th>
-                                    <th scope="col">Semester</th>
-                                    <th scope="col">IPK Terakhir</th>
-                                    <th scope="col">Pilihan Beasiswa</th>
-                                    <th scope="col">Berkas Syarat</th>
-                                    <th scope="col">Status Pengajuan</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Muhammad Nur Cahyo</td>
-                                    <td>nurcahyo@gmail.com</td>
-                                    <td>08978909890</td>
-                                    <td>3</td>
-                                    <td>3.15</td>
-                                    <td>Beasiswa Non Akademik B</td>
-                                    <td><a href="#">Lihat</a></td>
-                                    <td>Belum Diverifikasi</td>
-                                </tr>
-                                </tbody>
-                            </table>
+
+                    <?php if($hasil == true){ ?>
+                        <?php if($beasiswa != null){ ?>
+                        <div class="datab">
+                            <h4 class="title">Data Pendaftar Beasiswa</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">No HP</th>
+                                        <th scope="col">Semester</th>
+                                        <th scope="col">IPK Terakhir</th>
+                                        <th scope="col">Pilihan Beasiswa</th>
+                                        <th scope="col">Berkas Syarat</th>
+                                        <th scope="col">Status Pengajuan</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><?= ucwords($beasiswa->nama_mahasiswa) ?></td>
+                                        <td><?= ucwords($beasiswa->email_mahasiswa) ?></td>
+                                        <td><?= ucwords($beasiswa->no_hp) ?></td>
+                                        <td><?= ucwords($beasiswa->nama_semester) ?></td>
+                                        <td><?= ucwords($beasiswa->ipk) ?></td>
+                                        <td><?= ucwords($beasiswa->nama_beasiswa) ?></td>
+                                        <?php if($beasiswa->berkas_syarat != null){ ?>
+                                        <td><i class="bi bi-check-circle-fill"></i></td>
+                                        <?php }else{ ?>
+                                        <td><i class="bi bi-x-circle-fill"></i></td>
+                                        <?php } ?>
+                                        <td><?= ucwords($beasiswa->status_pengajuan) ?></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                    </div>
+                        </div>
+                        <?php }else{ ?>
+                            <div class="datab mt-3">
+                            <h4 class="title">Data yang Anda Masukkan Tidak Terdaftar sebagai Pengaju Beasiswa</h4>
+                            </div>
+                            <!-- <div class="container-xl px-4 mt-4 mb-4">
+                            <div class="card invoice">
+                                <div class="card-header p-4 p-md-5 border-bottom-0 bg-gradient-primary-to-secondary text-white-50">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-12 col-lg-auto mb-5 mb-lg-0 text-center text-lg-start">
+                                            <div class="h2 text-white mb-0">Tracking Pengajuan Beasiswa</div>
+                                            DATA ANDA TIDAK TERDAFTAR SEBAGAI PENGAJU BEASISWA
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div> -->
+                        </div>
+
+                        <?php } }?>
+
                 </div>
                 <!-- <div class="container px-5 my-4">
                 <table id="example" class="table table-striped" style="width:100%">
