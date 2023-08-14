@@ -6,7 +6,7 @@ use App\Models\MahasiswaModel;
 use CodeIgniter\API\ResponseTrait;
 
 
-class CheckingController extends BaseController
+class CheckData extends BaseController
 {
     use ResponseTrait;
 

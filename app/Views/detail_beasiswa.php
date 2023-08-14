@@ -27,7 +27,7 @@
           <div class="col-lg-5 content">
             <h2><?= $beasiswa->nama_beasiswa ?></h2>
             <p class="fst-italic py-3">
-              Beasiswa selama 1 semester <br> Deadline pengajuan Jumat, 09 April 2023 Pukul 23:59 WIB
+            <?= $beasiswa->jangka_beasiswa ?> <br> <?= $beasiswa->deadline ?>
             </p>
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>Persyaratan 1</strong></li>

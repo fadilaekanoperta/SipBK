@@ -33,17 +33,6 @@
                             <div class="invalid-feedback" data-sb-feedback="masukkanNama:required">Nama wajib diisi.</div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="masukkanEmail" name="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
-                            <label for="masukkanEmail">Masukkan Email</label>
-                            <div class="invalid-feedback" data-sb-feedback="masukkanEmail:required">Email wajib diisi.</div>
-                            <div class="invalid-feedback" data-sb-feedback="masukkanEmail:email">Email tidak sesuai</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="nomorHp" type="number" placeholder="Nomor HP" data-sb-validations="required" />
-                            <label for="nomorHp">Nomor HP</label>
-                            <div class="invalid-feedback" data-sb-feedback="nomorHp:required">Nomor HP wajib diisi.</div>
-                        </div>
-                        <div class="form-floating mb-3">
                             <select class="form-select" id="semesterSaatIni" aria-label="Semester saat ini" required>
                                 <option value="" selected disabled>Pilih semester</option>
                                 <?php foreach($semester as $sem){ ?>
@@ -51,6 +40,17 @@
                                 <?php } ?>
                             </select>
                             <label for="semesterSaatIni">Semester saat ini</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="nomorHp" type="number" placeholder="Nomor HP" data-sb-validations="required" />
+                            <label for="nomorHp">Nomor HP</label>
+                            <div class="invalid-feedback" data-sb-feedback="nomorHp:required">Nomor HP wajib diisi.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="masukkanEmail" name="masukkanEmail" type="email" placeholder="Masukkan Email" data-sb-validations="required,email" />
+                            <label for="masukkanEmail">Masukkan Email</label>
+                            <div class="invalid-feedback" data-sb-feedback="masukkanEmail:required">Email wajib diisi.</div>
+                            <div class="invalid-feedback" data-sb-feedback="masukkanEmail:email">Email tidak sesuai</div>
                         </div>
                         <div class="form-floating mb-3">
                             <input class="form-control" id="ipkTerakhir" type="text" placeholder="IPK Terakhir" data-sb-validations="required" value="Otomatis dari sistem" disabled/>
