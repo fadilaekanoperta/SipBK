@@ -66,7 +66,7 @@
                                     <td>3</td>
                                     <td>3.15</td>
                                     <td>Beasiswa Non Akademik B</td>
-                                    <td><a href="#">Unduh</a></td>
+                                    <td><a href="#">Lihat</a></td>
                                     <td>Belum Diverifikasi</td>
                                 </tr>
                                 </tbody>
