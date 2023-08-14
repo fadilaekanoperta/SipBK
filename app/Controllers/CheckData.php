@@ -13,7 +13,7 @@ class CheckData extends BaseController
 	public function mahasiswa($nama, $email)
 	{
         $this->mahasiswaModel = new MahasiswaModel();
-        // Lakukan query atau proses untuk mendapatkan IPK berdasarkan nama dan email
+        // Mendapatkan IPK berdasarkan nama dan email mahasiswa
         $response = $this->mahasiswaModel->get_data_mahasiswa($nama, $email);
 
         return $this->respond($response);
